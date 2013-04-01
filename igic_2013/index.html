@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web-based LiDAR Visualization with allover.js and PDAL</title>
+
+		<meta name="description" content="WebGL and friends represents a revolution in web-capable visualization of LiDAR data">
+		<meta name="author" content="Howard Butler">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Web-based LiDAR Visualization with allover.js and PDAL</h2>
+					<p>
+						<small><a href="http://hobu.biz">Howard Butler</a> / <a href="http://twitter.com/howardbutler">@howardbutler</a></small>
+					</p>
+				</section>
+
+				<section>
+                    <a href="http://hobu.biz"><img style="border:0;box-shadow:none;background:none" src="./images/hobulogo.png"></a>
+					<p>
+						<ol>
+                            <li>Started in 2001</li>
+                            <li>Basic GIS consultancy</li>
+                            <li>Open source GIS software development</li>
+                            <li>Point cloud data management solutions</li>
+                        </ol>
+					</p>
+				</section>
+
+				<section>
+                    <a href="http://hobu.biz"><img style="border:0;box-shadow:none;background:none" src="./images/hobulogo.png"></a>
+					<p>
+						<ul>
+                            <li>Datawarehousing for large-scale point cloud holdings</li>
+                            <li>US Army Corps Civilian and DoD clientele</li>
+                            <li>Open source emphasis</li>
+                        </ul>
+					</p>
+				</section>
+
+				<section>
+                    <a href="http://pointcloud.org"><img style="border:0;box-shadow:none;background:none" src="./images/pdal_logo.png"></a>
+					<p>
+						<ul>
+                            <li>Point cloud data translation and filtering</li>
+                            <li>Light filtering and few exploitation algos</li>
+                            <li>Suppors data management activities</li>
+                            <ul>
+                                <li>Format translation</li>
+                                <li>Processing pipelines</li>
+                                <li>Data filtering</li>
+                            </ul>
+                        </ul>
+					</p>
+				</section>
+
+				<section>
+                    <a href="http://pointcloud.org"><img style="border:0;box-shadow:none;background:none" src="./images/pdal_logo.png"></a>
+					<p>
+						<ul>
+                            <li>Point cloud data translation and filtering</li>
+                            <li>Light filtering and few exploitation algos</li>
+                            <li>Supports data management activities</li>
+                            <ul>
+                                <li>Format translation</li>
+                                <li>Processing pipelines</li>
+                                <li>Data filtering</li>
+                            </ul>
+                        </ul>
+					</p>
+				</section>
+
+				<section>
+                    <h3>Point Clouds</h3>
+					<p>
+						<ul>
+                            <li>randomly-spaced particle data</li>
+                            <li>frequently meshed, interpolated, or binned</li>
+                            <li>more attributes than simply XYZ</li>
+                            <li>actively or passively acquired</li>
+                        </ul>
+					</p>
+				</section>
+
+				<section>
+                    <h3>LiDAR</h3>
+					<p>
+						<ul>
+                            <li>actively captured point cloud data</li>
+                            <li>requires expensive hardware with precise positioning and timing</li>
+                            <li>limits of physics rapidly approaching</li>
+                        </ul>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'sky', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'page', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
