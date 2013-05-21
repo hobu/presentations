@@ -51,7 +51,7 @@
                         <li class="fragment roll-in">Based on <a href="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a> (embedded specification)</li>
                         <li class="fragment roll-in">Touch your video card directly with JavaScript!</li>
                         <li class="fragment roll-in"><s>Wide</s> browser support
-                            <ul class="fragment roll-in">
+                            <ul >
                                 <li>Chrome</li>
                                 <li>Firefox</li>
                                 <li>Safari (disabled)</li>
@@ -59,6 +59,13 @@
                             
                             </ul>
                         </li>
+                        <li class="fragment roll-in">Mobile support
+                            <ul >
+                                <li>iOS</li>
+                                <li>Android</li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </section>
 				<section data-state="lasers">
@@ -69,6 +76,15 @@
                         <li class="fragment roll-in"><s>Profit!</s>Systhesize a distance measurement</li>
                     </ol>
                 </section>
+				<section data-state="particles">
+                    <h2><a href="http://en.wikipedia.org/wiki/Point_cloud">Point Cloud</a></h2>
+					<ol>
+                        <li >Irregularly-spaced XYZ points</li>
+                        <li >Kinda raster, kinda vector</li>
+                        <li >Multi-dimensional (XYZRGBIrRC)</li>
+                    </ol>
+                </section>
+                
 				<section>
                     <h2><a href="http://postgis.net/">PostGIS</a></h2>
 					<ul>
@@ -93,6 +109,9 @@
                             <li>Geo-centric rather than vision- or vizualization-centric</li>
                         </ol>                        
                     </section>
+                    <section>
+                        <img src="./images/complex-pipeline.png" />                      
+                    </section>                    
                 </section>
 
 				<section>
@@ -132,8 +151,55 @@
                             <li>"Render" redundant points as vertexes</li>
                             <li>High density data means few holes</li>
                             <li>Much faster than global interpolation (ala <a href="http://www.gdal.org/gdal_grid.html"><i>gdal_grid</i></a>)
+                            <li>Parallelizable by the number of cores your 3D card contains</li>                                
                     </section>
+                    <section data-state="grid">
+                    </section>
+                    <section data-state="dots">
+                    </section>                                        
+                    <section data-state="shaded">
+                    </section>
+                    <section data-state="too-much">
+                        <h2>We can't read 180 billion points at once!</h2>              
+                    </section>                       
+                    <section data-state="pyramid">
+                        <h2>We solved this problem already</h2>
+                    </section>                       
+                    <section >
+                        <h2>Hit a spatially organized database</h2>
+                        <ul>
+                            <li>Patches, optimized for row-fill</li>
+                            <li>Spatially contiguous</li>
+                            <li>Indexed by patch bounds</li>
+                    </section>      
+                    <section data-state="chipper">
+                        <h2>Chipping the data</h2>
+                        <ul>
+                            <li>Sort one way, then sort the other</li>
+                            <li>Optimize for patches "close enough" fill, not exact</li>
+                            <li>Index patch bounds</li>
+                            <li>Clean up mess</li>
+                    </section>      
+
+
                 </section>
+
+                <section>
+                    <section data-state="sand">
+                        <h2>Particles</h2>
+                        <ul>
+                            <li>"Render" redundant points as vertexes</li>
+                            <li>High density data means few holes</li>
+                            <li>Much faster than global interpolation (ala <a href="http://www.gdal.org/gdal_grid.html"><i>gdal_grid</i></a>)
+                    </section>
+                    <section data-state="grid">
+                    </section>
+                    <section data-state="dots">
+                    </section>                                        
+                    <section data-state="shaded">
+                    </section>      
+                </section>
+                
 
 				<!-- Example of nested vertical slides -->
 				<section>

@@ -54,7 +54,7 @@ html.particles body {
   background-size: 100%;
 }
 html.particles section {
-background-color: rgba(255,255,255,0.8);
+background-color: rgba(255,255,255,1.0);
 }
 
 html.rasters body {
@@ -63,7 +63,7 @@ html.rasters body {
     background-size: 100%;
 }
 html.rasters section {
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,1.0);
 }
 
 html.lasers body {
@@ -85,8 +85,78 @@ html.splat section {
 	background-color: rgba(255,255,255,1.0);
 
 }
-  
-  
+
+html.grid body {
+    background:url("../../images/grid.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.grid section {
+	background-color: rgba(255,255,255,1.0);
+
+}
+
+html.dots body {
+    background:url("../../images/dots.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.dots section {
+	background-color: rgba(255,255,255,1.0);
+
+}
+
+html.shaded body {
+    background:url("../../images/shaded.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.shaded section {
+	background-color: rgba(255,255,255,1.0);
+
+}
+
+html.sand body {
+    background:url("../../images/sand.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.sand section {
+	background-color: rgba(255,255,255,1.0);
+
+}
+
+html.too-much body {
+    background:url("../../images/too-much.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.too-much section {
+	background-color: rgba(255,255,255,0.7);
+
+}
+
+html.chipper body {
+    background:url("../../images/chipper.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.chipper section {
+	background-color: rgba(255,255,255,0.9);
+
+}
+
+
+html.pyramid body {
+    background:url("../../images/pyramid.jpg");
+/*    background-position:center;*/
+    background-size: 100%;
+}
+html.pyramid section {
+	background-color: rgba(255,255,255,1.0);
+
+}
+
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
