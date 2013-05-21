@@ -188,16 +188,41 @@
                     <section data-state="sand">
                         <h2>Particles</h2>
                         <ul>
-                            <li>"Render" redundant points as vertexes</li>
-                            <li>High density data means few holes</li>
-                            <li>Much faster than global interpolation (ala <a href="http://www.gdal.org/gdal_grid.html"><i>gdal_grid</i></a>)
+                            <li>10 mil. vertices?</li>
+                            <li>Query dependent on view</li>
+                            <li>Beachballs</li>
+                        </ul>
                     </section>
-                    <section data-state="grid">
+                    <section data-state="pyramid">
+                        <h2>Convenient LiDAR point cloud properties</h2>
+                        <ul>
+                            <li>Consistent spacing/density</li>
+                            <li>(x,y,z) tuples often duplicated</li>
+                        </ul>
                     </section>
-                    <section data-state="dots">
-                    </section>                                        
-                    <section data-state="shaded">
-                    </section>      
+                    <section data-state="chipper">
+                        <h2>Reduced Resolution</h2>
+                        <p>131,072 points  - 2<sup>17</sup></p>
+                        <ul>
+                            <li>65,536 &mdash; 2<sup>16</sup> &mdash; level 16</li>
+                            <li>32,768 &mdash; 2<sup>15</sup> &mdash; level 15</li>
+                            <li>16,384 &mdash; 2<sup>14</sup> &mdash; level 14</li>
+                            <li>8,192 &mdash; 2<sup>13</sup> &mdash; level 13</li>
+                            <li>4,096 &mdash; 2<sup>12</sup> &mdash; level 12</li>
+                            <li>4,096 &mdash; 2<sup>12</sup> &mdash; level 12</li>
+                            </ul>
+                    </section>
+                    <section data-state="chipper">
+                        <img src="./images/point-pyramid.png" />
+                    </section>                    
+                    <section data-state="chipper">
+                        <ul>
+                            <li>No wasted downloading</li>
+                            <li>Vertex buffers always a known size</li>
+                            <li>Can adjust aggressiveness of query with view distance/bandwidth</li>
+                        </ul>
+
+                    </section> 
                 </section>
                 
 
