@@ -44,7 +44,24 @@
 						<small><a href="http://hobu.biz">Howard Butler</a> / <a href="http://twitter.com/howardbutler">@howardbutler</a></small>
 					</p>
 				</section>
+				<section>
+					<img src="./images/hobulogo.png" />
+                    <p>
+					<ul>
+                        <li >MapServer and GDAL contributor</li>
+                        <li >OSGeo emeritus board member</li>
+                        <li >Open source LiDAR</li>
+                    </ul>
+                </p>
+				</section>
 
+				<section>
+					<h1>WebGL-Enabled LiDAR Visualization with PostGIS and PDAL</h1>
+
+					<p>
+						<small><a href="http://hobu.biz">Howard Butler</a> / <a href="http://twitter.com/howardbutler">@howardbutler</a></small>
+					</p>
+				</section>
 				<section>
                     <h2><a href="http://en.wikipedia.org/wiki/WebGL">WebGL</a></h2>
 					<ul>
@@ -76,6 +93,7 @@
                         <li class="fragment roll-in"><s>Profit!</s>Systhesize a distance measurement</li>
                     </ol>
                 </section>
+              
 				<section data-state="particles">
                     <h2><a href="http://en.wikipedia.org/wiki/Point_cloud">Point Cloud</a></h2>
 					<ol>
@@ -84,7 +102,14 @@
                         <li >Multi-dimensional (XYZRGBIrRC)</li>
                     </ol>
                 </section>
-                
+				<section data-state="lasers">
+                    <h2>Point clouds aren't just lasers...</h2>
+					<ol>
+                        <li >Synthetic (SGM)</li>
+                        <li >Flash LiDAR</li>
+                        <li >Structured light sensors</li>
+                    </ol>
+                </section>                  
 				<section>
                     <h2><a href="http://postgis.net/">PostGIS</a></h2>
 					<ul>
@@ -95,11 +120,7 @@
                     <section>
                         <p><a href="http://pointcloud.org"><img src="./images/pdal_logo.png"></img></a></p>
                         <p>
-    					<ol>
-                            <li class="fragment roll-in">Not a terrorist organization</li>
-                            <li class="fragment roll-in">Not a horrid french slur</li>
-                            <li class="fragment roll-in"><a href="http://2013.foss4g.org/provisional/index.html#full-114">It rhymes with GDAL</a></li>
-                        </ol></p>
+                            <a href="http://2013.foss4g.org/provisional/index.html#full-114">It rhymes with GDAL</a></p>
                     </section>
                     <section>
                         <h2><a href="http://pointcloud.org">PDAL</a></h2>
@@ -116,7 +137,7 @@
 
 				<section>
                     <section>
-                        <h2>Visualization</h2>
+                        <h2>Visualization challenges</h2>
     					<ol>
                             <li>Particles</li>
                             <li>Rasters</li>
@@ -137,7 +158,8 @@
                             <li>Choices to make
                                 <ul>
                                     <li>Attributes to filter <br/>(1st return, classification)</li>
-                                    <li>Have to work piecewise</li>
+                                    <li>Binning resolution</li>
+                                    <li>Interpolation </li>
                                 </ul>
                             </li>
                         </ul>
@@ -145,11 +167,20 @@
                 </section>
                 
                 <section>
+                    <section data-state="rasters">
+                        <h2>Rasters</h2>
+    					<ul>
+                            <li>Make tiles fast</li>
+                            <li>React to dynamic data</li>
+                            <li>React to query parameters</li>
+                        </ul>
+                    </section>                    
                     <section data-state="splat">
                         <h2>Splat</h2>
                         <ul>
                             <li>"Render" redundant points as vertexes</li>
                             <li>High density data means few holes</li>
+                            <li>Apply kernels to interpolate over holes</li>
                             <li>Much faster than global interpolation (ala <a href="http://www.gdal.org/gdal_grid.html"><i>gdal_grid</i></a>)
                             <li>Parallelizable by the number of cores your 3D card contains</li>                                
                     </section>
@@ -180,7 +211,12 @@
                             <li>Index patch bounds</li>
                             <li>Clean up mess</li>
                     </section>      
-
+                    <section >
+                        <h2>GPU on the Server</h2>
+                        <ul>
+                            <li>Amazon ($2.10/hr)</li>
+                            <li>Tesla K20 - 2496 cores, $3k</li>
+                    </section>    
 
                 </section>
 
@@ -215,6 +251,8 @@
                     <section data-state="chipper">
                         <img src="./images/point-pyramid.png" />
                     </section>                    
+
+
                     <section data-state="chipper">
                         <ul>
                             <li>No wasted downloading</li>
@@ -223,12 +261,15 @@
                         </ul>
 
                     </section> 
+                    <section data-state="chipper">
+                        <img src="./images/point-grid.png" />
+                    </section> 
                 </section>
                 
                 <section data-state="rasters">
                     <h2>Rasters</h2>
 					<ul>
-                        <li>Rendered to <a href="https://github.com/AnalyticalGraphicsInc/cesium/wiki/Cesium-Terrain-Server">Cesium Terrain Format</a></li>
+                        <li>Rendered to <a href="https://github.com/AnalyticalGraphicsInc/cesium/wiki/Cesium-Terrain-Server">Cesium Terrain Format</a> </li>
                     </ul>
                         <img src="./images/raster-pipeline.png" />
                 </section>
@@ -240,6 +281,16 @@
                         <li><a href="http://geojson.org">GeoJSON</a></li>
                     </ul>
                         <img src="./images/point-pipeline.png" />
+                </section>
+                <section >
+                    <h2><a href="http://cesium.agi.com/">http://cesium.agi.com/</a></h2>
+					<ul>
+                        <li>3D spinny globe. In a browser!</li>
+                        <li>No plugins</li>
+                        <li>Apache 2 license</li>
+                        <li>11:30 Thursday - St. Croix 2</li>
+                    </ul>
+
                 </section>
 
 			</div>
